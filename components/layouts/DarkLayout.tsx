@@ -1,6 +1,10 @@
-import React from 'react';
+import  { FC, ReactNode } from 'react';
 
-export const DarkLayout = ({ children }) => {
+interface IProps {
+  children: ReactNode
+}
+
+export const DarkLayout: FC<IProps> = ({children})  => {
   return (
     <div
       style={{

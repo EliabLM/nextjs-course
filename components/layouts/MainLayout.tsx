@@ -1,13 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
+import {FC, ReactNode} from 'react';
 
-// Styles
-import styles from './MainLayout.module.css';
+// Next
+import Head from 'next/head';
 
 // Components
 import { Navbar } from '../Navbar';
 
-export const MainLayout = ({ children }) => {
+// Styles
+import styles from './MainLayout.module.css';
+
+
+interface IProps {
+  children: ReactNode
+}
+
+export const MainLayout: FC<IProps> = ({ children }) => {
   return (
     <div className={styles.container}>
       <Head>
